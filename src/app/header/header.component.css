@@ -1,6 +1,10 @@
+.headstyle {
+	background: #ccc;
+	border-bottom: 2px solid gray;
+}
 
 p { color: red;
 font-size: 14px;
-border-bottom: 2px dotted lightblue;
-padding-bottom: 5px;
+ padding-bottom: 5px;
 }
+

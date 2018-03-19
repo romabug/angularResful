@@ -1,8 +1,8 @@
 CLI常用命令
 
 ng new project-name - 创建一个新项目，置为默认设置
-ng new project_name --routing   (pls routing files)
-
+ng new project-name --routing   ( 带路由的项目 pls routing files)
+## 如果一开始没有加入router， 后期加入 https://shermandigital.com/blog/configure-routing-in-an-angular-cli-project/
 
 ng build - 构建/编译应用
 ng test - 运行单元测试

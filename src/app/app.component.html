@@ -1,20 +1,26 @@
-<div class="master">i am master at component.html</div>
+<div class="master">  
+  <app-header></app-header>
+
+  i am master at component.html， below is the router-outlet</div>
+<hr>
+<!--插座在这里.-->
+<div class="container"  >
+<router-outlet></router-outlet>
+</div>
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" style="text-align:center">
-  <app-header></app-header>
+
   <h1>
-   Welcome -{{username}} -to {{title}}! </h1>
-  <img width="170" src="http://www.imooc.com/static/img/index/logo_new.png">
+    <img width="170" src="http://www.imooc.com/static/img/index/logo_new.png">Welcome -{{username}} -to {{title}}! </h1>
+ 
 </div>
 <div class="container top1">
-  <h3>i am top1</h3>
   <p>i am the content</p>
-  <button class="btn btn-primary btn-lg">BUTTON</button>
+  <button (click)="toTest()" class="btn btn-primary btn-lg">to test page</button>
   <h2>444Here are some links to help you start: </h2>
   <ul>
-    <li>
-      <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
-    </li>
+    
     <li>
       <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
     </li>
@@ -26,3 +32,5 @@
 <div class="container">
   <app-myfooter></app-myfooter>
 </div>
+
+
