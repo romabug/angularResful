@@ -41,3 +41,14 @@ const routes: Routes = [
   declarations: []
 })
 export class AppRoutingModule {}
+
+
+// 页面内 通过 按钮事件来跳转
+  // constructor(private router: Router) {};
+  // toTest() {
+  //   console.log("to test() runing..");
+  //   this.router.navigate(['/test']);
+
+  // }
+
+
