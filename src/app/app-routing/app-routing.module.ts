@@ -5,6 +5,7 @@ import { MyfooterComponent } from '../myfooter/myfooter.component';
 import { HeaderComponent } from '../header/header.component';
 import { TestComponent } from '../test/test.component';
 import { DetailsComponent } from '../details/details.component';
+import { Details2Component } from '../details2/details2.component';
 
 
 
@@ -19,6 +20,10 @@ const routes: Routes = [{
   {
     path: 'details',
     component: DetailsComponent,
+  },
+    {
+    path: 'details2/:name',
+    component: Details2Component,
   },
   {
     path: 'head',

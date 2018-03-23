@@ -5,10 +5,17 @@
 
 
 
-<ul> 参数导航
+<ul> 常规链接带参数 的跳转
 <li><a [routerLink]="['/test']" [queryParams]="{id:1, name:'tonycai'}">go test with params: id name</a>
 </li>
 <li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">go  details params: id name</a></li>	
+
+</ul>	
+
+
+<ul> router路由配置中带参数 的跳转
+
+<li><a [routerLink]="['/details2', 'tony']" >go  details2 params: id name</a></li>	
 
 </ul>	
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-details2',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details2.component.css']
 })
 export class Details2Component implements OnInit {
+ 
+constructor(private routeInfo: ActivatedRoute) {}
 
-  constructor() { }
+
+  private stockID: number;
+  private stockName: string;
 
   ngOnInit() {
-  }
+   // this.stockID = this.routeInfo.snapshot.params["id"];
+     this.stockName = this.routeInfo.snapshot.params["name"];
+   }
+
 
 }
