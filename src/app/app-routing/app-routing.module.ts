@@ -4,15 +4,21 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { MyfooterComponent } from '../myfooter/myfooter.component';
 import { HeaderComponent } from '../header/header.component';
 import { TestComponent } from '../test/test.component';
+import { DetailsComponent } from '../details/details.component';
 
-const routes: Routes = [
-{
+
+
+const routes: Routes = [{
     path: '',
     component: DashboardComponent,
   },
   {
     path: 'test',
     component: TestComponent,
+  },
+  {
+    path: 'details',
+    component: DetailsComponent,
   },
   {
     path: 'head',
@@ -22,7 +28,7 @@ const routes: Routes = [
     path: 'foot',
     component: MyfooterComponent,
   },
-    {
+  {
     path: '**',
     component: TestComponent,
   }
@@ -44,11 +50,9 @@ export class AppRoutingModule {}
 
 
 // 页面内 通过 按钮事件来跳转
-  // constructor(private router: Router) {};
-  // toTest() {
-  //   console.log("to test() runing..");
-  //   this.router.navigate(['/test']);
+// constructor(private router: Router) {};
+// toTest() {
+//   console.log("to test() runing..");
+//   this.router.navigate(['/test']);
 
-  // }
-
-
+// }

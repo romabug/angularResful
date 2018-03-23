@@ -2,8 +2,25 @@
 <h3>
 ///////  dashboard works!
 </h3>
+
+
+
+<ul> 参数导航
+<li><a [routerLink]="['/test']" [queryParams]="{id:1, name:'tonycai'}">go test with params: id name</a>
+</li>
+<li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">go  details params: id name</a></li>	
+
+</ul>	
+
+ 
+
+<ul> 常规导航
 <li><a [routerLink]="['/head']">go  header</a>
 </li>
 <li><a [routerLink]="['/foot']">go  footer</a>
 </li>
-<li><a [routerLink]="['/test']">go  test</a></li>
+<li><a [routerLink]="['/test']">go  test</a></li>	
+
+</ul>	
+
+
