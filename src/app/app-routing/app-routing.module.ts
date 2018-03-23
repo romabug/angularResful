@@ -21,7 +21,7 @@ const routes: Routes = [{
     path: 'details',
     component: DetailsComponent,
   },
-    {
+  { //带参数路由
     path: 'details2/:name',
     component: Details2Component,
   },
@@ -33,7 +33,12 @@ const routes: Routes = [{
     path: 'foot',
     component: MyfooterComponent,
   },
-  {
+  { 
+    //重定向路由
+    path: 'xx',
+    redirectTo: '/foot', pathMatch:'full'
+  },
+  { //访问不到的路由，错误匹配路由
     path: '**',
     component: TestComponent,
   }

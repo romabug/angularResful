@@ -12,11 +12,11 @@ export class Details2Component implements OnInit {
 constructor(private routeInfo: ActivatedRoute) {}
 
 
-  private stockID: number;
+ // private stockCanshu: string;
   private stockName: string;
 
   ngOnInit() {
-   // this.stockID = this.routeInfo.snapshot.params["id"];
+  //  this.stockCanshu = this.routeInfo.snapshot.data[0]["canshu"];
      this.stockName = this.routeInfo.snapshot.params["name"];
    }
 
