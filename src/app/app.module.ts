@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TestComponent } from './test/test.component';
 import { DetailsComponent } from './details/details.component';
 import { Details2Component } from './details2/details2.component';
+import { Son1Component } from './son/son1/son1.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Details2Component } from './details2/details2.component';
     DashboardComponent,
     TestComponent,
     DetailsComponent,
-    Details2Component
+    Details2Component,
+    Son1Component
   ],
   imports: [
     BrowserModule,

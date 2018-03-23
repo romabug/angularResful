@@ -6,6 +6,7 @@ import { HeaderComponent } from '../header/header.component';
 import { TestComponent } from '../test/test.component';
 import { DetailsComponent } from '../details/details.component';
 import { Details2Component } from '../details2/details2.component';
+import { Son1Component } from '../son/son1/son1.component';
 
 
 
@@ -20,6 +21,19 @@ const routes: Routes = [{
   {
     path: 'details',
     component: DetailsComponent,
+    //自路由， 记得加 2级 router-outlet
+    children: [
+      {
+        path: 'son1',
+        component: Son1Component,
+      },
+      {
+        path: 'test',
+        component: TestComponent,
+      },
+
+    ]
+
   },
   { //带参数路由
     path: 'details2/:name',
@@ -33,10 +47,11 @@ const routes: Routes = [{
     path: 'foot',
     component: MyfooterComponent,
   },
-  { 
+  {
     //重定向路由
     path: 'xx',
-    redirectTo: '/foot', pathMatch:'full'
+    redirectTo: '/foot',
+    pathMatch: 'full'
   },
   { //访问不到的路由，错误匹配路由
     path: '**',
