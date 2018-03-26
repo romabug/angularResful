@@ -22,13 +22,20 @@ const routes: Routes = [{
     path: 'details',
     component: DetailsComponent,
     //自路由， 记得加 2级 router-outlet
-    children: [
-      {
+    children: [{
         path: 'son1',
         component: Son1Component,
       },
       {
         path: 'test',
+        component: TestComponent,
+      },
+      {
+        path: '',
+        component: Son1Component,
+      },
+      {
+        path: '**',
         component: TestComponent,
       },
 
