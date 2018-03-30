@@ -7,6 +7,7 @@ import { TestComponent } from '../test/test.component';
 import { DetailsComponent } from '../details/details.component';
 import { Details2Component } from '../details2/details2.component';
 import { Son1Component } from '../son/son1/son1.component';
+import { Forms1Component } from '../forms1/forms1.component';
 
 
 
@@ -54,6 +55,11 @@ const routes: Routes = [{
     path: 'foot',
     component: MyfooterComponent,
   },
+
+  {
+    path: 'form1',
+    component: Forms1Component,
+  },
   {
     //重定向路由
     path: 'xx',
@@ -64,6 +70,7 @@ const routes: Routes = [{
     path: '**',
     component: TestComponent,
   }
+
 
 
 ];
