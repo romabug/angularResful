@@ -11,6 +11,7 @@ import { TestComponent } from './test/test.component';
 import { DetailsComponent } from './details/details.component';
 import { Details2Component } from './details2/details2.component';
 import { Son1Component } from './son/son1/son1.component';
+import { Forms1Component } from './forms1/forms1.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Son1Component } from './son/son1/son1.component';
     TestComponent,
     DetailsComponent,
     Details2Component,
-    Son1Component
+    Son1Component,
+    Forms1Component
   ],
   imports: [
     BrowserModule,
