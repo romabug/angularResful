@@ -8,6 +8,7 @@ import { DetailsComponent } from '../details/details.component';
 import { Details2Component } from '../details2/details2.component';
 import { Son1Component } from '../son/son1/son1.component';
 import { Forms1Component } from '../forms1/forms1.component';
+import { Forms2Component } from '../forms2/forms2.component';
 
 
 
@@ -60,6 +61,12 @@ const routes: Routes = [{
     path: 'form1',
     component: Forms1Component,
   },
+
+  {
+    path: 'form2',
+    component: Forms2Component,
+  },
+
   {
     //重定向路由
     path: 'xx',

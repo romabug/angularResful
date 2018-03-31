@@ -2,48 +2,24 @@
 <h3> 
 ///////  dashboard works! 
 </h3>
-
-
-
 <ul> 常规链接带参数 的跳转
-<li><a [routerLink]="['/test']" [queryParams]="{id:1, name:'tonycai'}">go test with params: id name</a>
-</li>
-<li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">go  details params: id name</a> (字路由例子)</li>	
-
-</ul>	
-
-
+  <li><a [routerLink]="['/test']" [queryParams]="{id:1, name:'tonycai'}">go test with params: id name</a>
+  </li>
+  <li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">go  details params: id name</a> (字路由例子)</li>
+</ul>
 <ul> router路由配置中带参数 的跳转
-
-<li><a [routerLink]="['/details2', 'tony']" >go  details2 params: name</a></li>	
-
-</ul>	
-
- 
-
+  <li><a [routerLink]="['/details2', 'tony']">go  details2 params: name</a></li>
+</ul>
 <ul> 常规导航
-
-<li><a [routerLink]="['/foot']">go  footer</a>
-</li>
-<li><a [routerLink]="['/test']">go  test</a></li>	
-
-</ul>	
-
-
+  <li><a [routerLink]="['/foot']">go  footer</a>
+  </li>
+  <li><a [routerLink]="['/test']">go  test</a></li>
+</ul>
 <ul> 重定向路由
- 
-<li><a [routerLink]="['/xx']">go  xx</a></li>	
-
-</ul>	
-
-
-
+  <li><a [routerLink]="['/xx']">go  xx</a></li>
+</ul>
 <ul> 表单处理
- 
-<li><a [routerLink]="['/form1']">模版式表单--go form1</a></li>	
+  <li><a [routerLink]="['/form1']">模版式表单--go form1</a></li>
 
-</ul>	
-
-
-
-
+    <li><a [routerLink]="['/form2']">相应式表单--go form2</a></li>
+</ul>

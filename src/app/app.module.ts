@@ -13,6 +13,7 @@ import { DetailsComponent } from './details/details.component';
 import { Details2Component } from './details2/details2.component';
 import { Son1Component } from './son/son1/son1.component';
 import { Forms1Component } from './forms1/forms1.component';
+import { Forms2Component } from './forms2/forms2.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Forms1Component } from './forms1/forms1.component';
     DetailsComponent,
     Details2Component,
     Son1Component,
-    Forms1Component
+    Forms1Component,
+    Forms2Component
   ],
   imports: [
     BrowserModule,
