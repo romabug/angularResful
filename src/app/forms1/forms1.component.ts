@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Forms1Component implements OnInit {
 
+createUser (info:any) {
+  console.log(info);
+ // alert(info.myusername);
+
+}
+
   constructor() { }
 
   ngOnInit() {
+
   }
+
+
+
 
 }
