@@ -9,6 +9,7 @@ import { Details2Component } from '../details2/details2.component';
 import { Son1Component } from '../son/son1/son1.component';
 import { Forms1Component } from '../forms1/forms1.component';
 import { Forms2Component } from '../forms2/forms2.component';
+import { DataBindComponent } from '../data-bind/data-bind.component';
 
 
 
@@ -65,6 +66,11 @@ const routes: Routes = [{
   {
     path: 'form2',
     component: Forms2Component,
+  },
+
+  {
+    path: 'databind',
+    component: DataBindComponent,
   },
 
   {

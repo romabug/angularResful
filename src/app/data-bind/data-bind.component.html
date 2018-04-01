@@ -1,15 +1,15 @@
-<h4>
-  模版式表单------- forms1 works!
-</h4>
+<h4>数据绑定 data-bind works!</h4>
 <p>
-  <button type="button" class="btn btn-sm btn-default" (click)="mytest = 'lisa yan ru yu' ">Default</button>
-  <button type="button" class="btn btn-sm btn-primary">Primary</button>
-  <button type="button" class="btn btn-sm btn-success">Success</button>
+  <button type="button" class="btn btn-sm btn-default" (click)="mytest = 'lisa yan ru yu' ">mytest</button>
+  <button (click)="changeEmail()"  type="button" class="btn btn-sm btn-primary">change myEMAIL value</button>
+  <button type="button" class="btn btn-sm btn-success" (click)=" saved =false;   showAlert()">Show Alert</button>
 </p>
 <li>对象转json格式显示:{{myForm.value | json}} </li>
 <li>访问 passwordGROUP >> {{myForm.value.passwordGROUP | json}} </li>
 <li> 获取模版变量 myEMAIL >> {{ myEMAIL.value}} </li>
-<form #myForm="ngForm" (ngSubmit)="createUser(myForm.value)">
+
+
+<div ngForm #myForm="ngForm" >
   <div class="form1">
     <div class="form-group">
       <label for="username">username:</label>
@@ -19,36 +19,30 @@
       <label for="email">Email address:</label>
       <input type="email" class="form-control" ngModel name="myemail" #myEMAIL="ngModel">
     </div>
-
-<div ngModelGroup = "passwordGROUP">
-    <div class="form-group">
-      <label for="pwd">password again:</label>
-      <input type="password" class="form-control" ngModel name="mypass">
+    <div ngModelGroup="passwordGROUP">
+      <div class="form-group">
+        <label for="pwd">password again:</label>
+        <input type="password" class="form-control" ngModel name="mypass">
+      </div>
+      <div class="form-group">
+        <label for="pwd2">Password:</label>
+        <input type="password" class="form-control" ngModel name="mypass2">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="pwd2">Password:</label>
-      <input type="password" class="form-control" ngModel name="mypass2">
-    </div>	
-
-</div>
-
-
-
-
     <div class="checkbox">
       <label>
         <input type="checkbox"> Remember me</label>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button (click)="createUser(myForm.value)" type="submit" class="btn btn-default">Submit</button>
   </div>
-</form>
+</div>
 <article>
   <li>引入了FormsModule模块后，angular自动在form标签里放入ngForm标签,并接管from表单， submit不起作用。。。 ngForm也可以放div里，就不需要form 标签</li>
   <li>如果ngNoForm 则表单不被angular接管</li>
   <li> 每个接收数据的表单，必须有 ngModel name=" xxx " ， xxx作为 myForm 对象的 一个属性</li>
   <li>模版变量的 绑定 需要在表单里声明 #myEMAIL ="ngModel",访问则{{ myEMAIL.value}} </li>
   <li> ngModelGroup 用于组织表单属性, 仅需要在几个表单外层标签上声明 ngModelGroup = "passwordGROUP"， json 数据遍自动加属性分组</li>
-  <li></li>
+  <li>如果要#myForm="ngForm" 则ngForm 需要加入到 div 里， 如果不是form标签</li>
   <li></li>
   <li></li>
   <li></li>

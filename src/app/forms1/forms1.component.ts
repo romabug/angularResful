@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Forms1Component implements OnInit {
 
+private mytest: string = "hi mytest is tony";
 private getusername:string;
 
 createUser (info:any):void {
   console.log(info);
     console.log("myusername--" + info.myusername);
     console.log("passwordGROUP--" + info.passwordGROUP.mypass);
+ 
+ console.log("mytest new value--"  + this.mytest)
  // alert(info.myusername);  
 
 }
