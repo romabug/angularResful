@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import 'rxjs/Rx';
+
+
 
 @Component({
   selector: 'app-rxjs',
@@ -8,13 +12,24 @@ import { Observable } from 'rxjs';
 })
 export class RxjsComponent implements OnInit {
 
-  onkey(input: string): void {
-    console.log(input);
-  }
+  // FormControl   
+  searchInput: FormControl = new FormControl();
 
-
-
+  getStockInfo(value: string) { console.log(value); }
+ 
   constructor() {
+  /// 延迟响应////仅下面2行//
+    this.searchInput.valueChanges
+      .debounceTime(700)
+      .subscribe(
+      	e => this.getStockInfo(e), 
+       () => console.log("the end..") //流发射结束后运行
+
+     );
+
+ 
+
+    ////////测试响应式编程/////////////////////
 
     //被观察对象 Observable -- 流，数组 
     Observable.from([1, 2, 3, 4, 5])
@@ -30,9 +45,16 @@ export class RxjsComponent implements OnInit {
         () => console.log("结束了..") //流发射结束后运行
       );
 
-
+    ////////////////////////////////////////////////////////
 
   }
+
+
+
+  onkey(input: string): void {
+    console.log(input);
+  }
+
 
   ngOnInit() {}
 
