@@ -1,11 +1,11 @@
-<div class="master">
-  <app-header></app-header>
-  <div style="text-align: center">
+<div class="master" >
+  <div style="text-align: center; background: lightgray">
     <a [routerLink]="[{outlets: {primary: 'deshboard', aux: 'fuzhu'}}]">进入辅助路由1</a>
     <a [routerLink]="[{outlets: {primary: 'foot', aux: 'details'}}]">进入辅助路由2</a>
     <a [routerLink]="[{outlets: {aux: null}}]">关闭辅助路由</a>
   </div>
-  i am master at component.html， below is the router-outlet
+  <app-header></app-header>
+
 </div>
 <hr>
 <!--插座在这里.-->
