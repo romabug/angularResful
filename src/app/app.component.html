@@ -1,35 +1,17 @@
-<div class="master">  
+<div class="master">
   <app-header></app-header>
-  i am master at component.html， below is the router-outlet</div>
+  <div style="text-align: center">
+    <a [routerLink]="[{outlets: {primary: 'deshboard', aux: 'fuzhu'}}]">进入辅助路由1</a>
+    <a [routerLink]="[{outlets: {primary: 'foot', aux: 'details'}}]">进入辅助路由2</a>
+    <a [routerLink]="[{outlets: {aux: null}}]">关闭辅助路由</a>
+  </div>
+  i am master at component.html， below is the router-outlet
+</div>
 <hr>
 <!--插座在这里.-->
-<div class="container"  >
-<router-outlet></router-outlet>
-</div>
-
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container" style="text-align:center">
-
-  <h1>
-    <img width="170" src="http://www.imooc.com/static/img/index/logo_new.png">Welcome -{{username}} -to {{title}}! </h1>
- 
-</div>
-<div class="container top1">
-  <p>i am the content</p>
-  <button (click)="toTest()" class="btn btn-primary btn-lg">to test page</button>
-  <h2>444Here are some links to help you start: </h2>
-  <ul>
-    
-    <li>
-      <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
-    </li>
-    <li>
-      <a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a>
-    </li>
-  </ul>
-</div>
 <div class="container">
-  <app-myfooter></app-myfooter>
+  <router-outlet></router-outlet>
+  <router-outlet name="aux"></router-outlet>
 </div>
-
-
+<!--The content below is only a placeholder and can be replaced.-->
+<app-myfooter></app-myfooter>

@@ -15,6 +15,7 @@ import { Son1Component } from './son/son1/son1.component';
 import { Forms1Component } from './forms1/forms1.component';
 import { Forms2Component } from './forms2/forms2.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
+import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DataBindComponent } from './data-bind/data-bind.component';
     Son1Component,
     Forms1Component,
     Forms2Component,
-    DataBindComponent
+    DataBindComponent,
+    FuzhuOutletComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { Son1Component } from '../son/son1/son1.component';
 import { Forms1Component } from '../forms1/forms1.component';
 import { Forms2Component } from '../forms2/forms2.component';
 import { DataBindComponent } from '../data-bind/data-bind.component';
+import { FuzhuOutletComponent } from '../fuzhu-outlet/fuzhu-outlet.component';
 
 
 
@@ -17,6 +18,12 @@ const routes: Routes = [{
     path: '',
     component: DashboardComponent,
   },
+
+  {
+    path: 'deshboard',
+    component: DashboardComponent,
+  },
+
   {
     path: 'test',
     component: TestComponent,
@@ -24,7 +31,7 @@ const routes: Routes = [{
   {
     path: 'details',
     component: DetailsComponent,
-    //自路由， 记得加 2级 router-outlet
+    //子路由， 记得加 2级 router-outlet
     children: [{
         path: 'son1',
         component: Son1Component,
@@ -57,6 +64,22 @@ const routes: Routes = [{
     path: 'foot',
     component: MyfooterComponent,
   },
+
+  {
+  //辅助路由1
+    path: 'fuzhu',
+    component: FuzhuOutletComponent, 
+    outlet:'aux'
+  },
+
+  {
+  //辅助路由2
+    path: 'details',
+    component: DetailsComponent, 
+    outlet:"aux"
+  },
+
+
 
   {
     path: 'form1',
