@@ -66,17 +66,20 @@ const routes: Routes = [{
   },
 
   {
-  //辅助路由1
-    path: 'fuzhu',
-    component: FuzhuOutletComponent, 
-    outlet:'aux'
-  },
+    //辅助路由1
 
+    //链接写法 <a [routerLink]="[{outlets: {primary: 'deshboard', aux: 'fuzhu'}}]">进入辅助路由1</a>
+    // 关闭   <a [routerLink]="[{outlets: {aux: null}}]">关闭辅助路由</a>
+
+    path: 'fuzhu',
+    component: FuzhuOutletComponent,
+    outlet: 'aux'
+  },
   {
-  //辅助路由2
+    //辅助路由2
     path: 'details',
-    component: DetailsComponent, 
-    outlet:"aux"
+    component: DetailsComponent,
+    outlet: "aux"
   },
 
 

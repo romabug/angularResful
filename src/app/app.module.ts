@@ -16,6 +16,7 @@ import { Forms1Component } from './forms1/forms1.component';
 import { Forms2Component } from './forms2/forms2.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
 import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
     Forms1Component,
     Forms2Component,
     DataBindComponent,
-    FuzhuOutletComponent
+    FuzhuOutletComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,

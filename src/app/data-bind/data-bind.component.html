@@ -1,15 +1,54 @@
-<h4>数据绑定 data-bind works!</h4>
-<p>
-  <button type="button" class="btn btn-sm btn-default" (click)="mytest = 'lisa yan ru yu' ">mytest</button>
-  <button (click)="changeEmail()"  type="button" class="btn btn-sm btn-primary">change myEMAIL value</button>
-  <button type="button" class="btn btn-sm btn-success" (click)=" saved =false;   showAlert()">Show Alert</button>
-</p>
+<h4 style="background: pink; line-height: 2;">数据绑定 data-bind works!</h4>
+<ul>
+  <li>
+  		<h4> $event 事件 绑定操作</h4>
+    <button (click)="getevent($event)" class="btn btn-sm btn-primary">单向AAA</button> <span> {{gotinfo.url}} >> {{gotinfo.innertext}}</span>
+  </li>
+  <li>
+    <button class="btn btn-sm btn-primary">BBB</button><span>bb</span>
+  </li>
+</ul>
+<ul>
+	<h4> 样式CSS class绑定操作</h4>
+
+  <li>
+    <button (dblclick)="testFirstclass()" class="btn btn-xs btn-primary">插值绑定 dblclick</button><span id="{{firstid}}" class="{{firstclass}}">11111</span>
+  </li>
+  <li>
+    <button (mouseover)="test2class()" class="btn btn-xs btn-primary">dom属性绑定 mouseover</button> <br>
+    <span [class]="returnClass()">22222, 加进returnClass()是表达式 返回字符串</span>
+    <span [class]="secclass">｜｜ 3333, 加进secclass 字符串作为类</span>
+    <span class="c1" [class.bg]="secclass">｜｜ 3333, 加进 bg</span>
+  </li>
+  <li>
+    <button (click)="Dospanclass()" class="btn btn-xs btn-primary">类属性作为class</button>
+
+    <span [ngClass]="spanclass">[ngClass]的使用</span>
+  </li>
+
+
+ <h4> 属性绑定，双向绑定</h4>
+  <button (click)="showValuea()"  class="btn btn-xs btn-primary">显示 value_a</button>
+  <li> 有 (input)事件函数和[value]属性绑定 相当于[(ngModel)]，value_a 的值：{{value_a}}</li>
+  <li> （input)是从模版——》控制器，[value]属性绑定是从 控制器——》模版 </li>
+  <input (input)="changeme($event)" value="default value" 
+  [value]="value_a" 
+  type="text" class="form-control" > 
+
+  <br>
+<span>盒子里面装香蕉 [(ngModel)]="value_a" 双向绑定</span>
+  <input value="default value" [(ngModel)]="value_a" type="text" class="form-control" >
+
+</ul>
 <li>对象转json格式显示:{{myForm.value | json}} </li>
 <li>访问 passwordGROUP >> {{myForm.value.passwordGROUP | json}} </li>
 <li> 获取模版变量 myEMAIL >> {{ myEMAIL.value}} </li>
-
-
-<div ngForm #myForm="ngForm" >
+<p>
+  <button type="button" class="btn btn-sm btn-default" (click)="mytest = 'lisa yan ru yu' ">mytest</button>
+  <button (click)="changeEmail()" type="button" class="btn btn-sm btn-default">change myEMAIL value</button>
+  <button type="button" class="btn btn-sm btn-default" (click)=" saved =false;   showAlert()">Show Alert</button>
+</p>
+<div ngForm #myForm="ngForm">
   <div class="form1">
     <div class="form-group">
       <label for="username">username:</label>
