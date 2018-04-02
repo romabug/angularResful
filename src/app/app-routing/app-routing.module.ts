@@ -11,6 +11,7 @@ import { Forms1Component } from '../forms1/forms1.component';
 import { Forms2Component } from '../forms2/forms2.component';
 import { DataBindComponent } from '../data-bind/data-bind.component';
 import { FuzhuOutletComponent } from '../fuzhu-outlet/fuzhu-outlet.component';
+import { RxjsComponent } from '../rxjs/rxjs.component';
 
 
 
@@ -63,6 +64,10 @@ const routes: Routes = [{
   {
     path: 'foot',
     component: MyfooterComponent,
+  },
+    {
+    path: 'rxjs',
+    component: RxjsComponent,
   },
 
   {

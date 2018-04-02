@@ -38,7 +38,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     BrowserModule,
     AppRoutingModule, // 路由
     FormsModule, //模版表单
-    ReactiveFormsModule //响应式表单
+    ReactiveFormsModule //响应式编程模块，可用于响应式表单
+
   ],
   providers: [],
   bootstrap: [AppComponent]
