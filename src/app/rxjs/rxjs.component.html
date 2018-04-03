@@ -1,10 +1,10 @@
 <h3>rxjs 响应式编程－－4个主要概念</h3>
 <ul>
-  <li>1.被观察对象 Observable (流，数组）：表示一组值或事件的集合</li>
-  <li>2.观察者Observer： 一个回调函数几何，它知道怎样去监听呗observable发送的值</li>
-  <li>3.订阅Subscription: 表示一个可观察对象，主要用于注册和取消注册</li>
-  <li>4.操作符Operators: 纯粹的函数，使开发者可以以函数编程方式处理集合</li>
-  <li> </li>
+	<li>1.被观察对象 Observable (流，数组）：表示一组值或事件的集合</li>
+	<li>2.观察者Observer： 一个回调函数几何，它知道怎样去监听呗observable发送的值</li>
+	<li>3.订阅Subscription: 表示一个可观察对象，主要用于注册和取消注册</li>
+	<li>4.操作符Operators: 纯粹的函数，使开发者可以以函数编程方式处理集合</li>
+	<li> </li>
 </ul>
 <button type="button" class="btn btn-sm btn-primary">Primary</button>
 <button type="button" class="btn btn-sm btn-success">Success</button>
@@ -12,12 +12,11 @@
 <label for="username">TEST FormControl:</label>
 <!-- 	<li>[formControl] 是驼峰的 首字母小写</li> -->
 <input class="form-control" type="text" placeholder="输入股票" [formControl]="searchInput">
-
 <label for="username">SEARCH KEY WORD:{{mySearch.value}}</label>
 <input type="text" class="form-control" #mySearch (keyup)="onkey(mySearch.value)">
 <ul>
-  <li>#mySearch 是本地模版变量，html标签里加＃标识，逻辑里不加#</li>
-  <li></li>
-  <li></li>
-  <li></li>
+	<li>#mySearch 是本地模版变量，html标签里加＃标识，逻辑里不加#</li>
+	<li></li>
+	<li></li>
+	<li></li>
 </ul>

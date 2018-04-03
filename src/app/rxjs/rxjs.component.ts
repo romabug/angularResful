@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import 'rxjs/Rx';
 
 
-
 @Component({
   selector: 'app-rxjs',
   templateUrl: './rxjs.component.html',
