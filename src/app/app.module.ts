@@ -15,11 +15,12 @@ import { Son1Component } from './son/son1/son1.component';
 import { Forms1Component } from './forms1/forms1.component';
 import { Forms2Component } from './forms2/forms2.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
-import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
 //倒入路由守卫，非组件...TestGuard需要加入 provider, router里也要引用
 import { TestGuard, TestGuard2 } from './guard/test.guard';
 import { LeaveGuard } from './guard/candeactivate.guard';
+import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { Details3Component } from './details3/details3.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LeaveGuard } from './guard/candeactivate.guard';
     Forms2Component,
     DataBindComponent,
     FuzhuOutletComponent,
-    RxjsComponent    
+    RxjsComponent,
+    Details3Component,    
     //GuardComponent
   ],
   imports: [

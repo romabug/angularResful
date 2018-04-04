@@ -15,12 +15,7 @@ import { RxjsComponent } from '../rxjs/rxjs.component';
 //倒入路由守卫，非组件 TestGuard需要加入到module provider
 import { TestGuard, TestGuard2 } from '../guard/test.guard';
 import { LeaveGuard } from '../guard/candeactivate.guard';
-
-
-
-
-
-
+import { Details3Component } from '../details3/details3.component';
 const routes: Routes = [{
     path: ''
     , component: DashboardComponent
@@ -32,13 +27,11 @@ const routes: Routes = [{
   , {
     path: 'test'
     , component: TestComponent
-    ,
-        canDeactivate: [LeaveGuard]
-    }
+    , canDeactivate: [LeaveGuard]
+  }
   , {
     path: 'details'
-    , component: DetailsComponent
-    , //子路由， 记得加 2级 router-outlet
+    , component: DetailsComponent, //子路由， 记得加 2级 router-outlet
     children: [{
         path: 'son1'
         , component: Son1Component
@@ -64,9 +57,8 @@ const routes: Routes = [{
   , {
     path: 'head'
     , component: HeaderComponent
-  , },
-
-  {
+  , }
+  , {
     path: 'rxjs'
     , component: RxjsComponent
   , }
@@ -101,25 +93,21 @@ const routes: Routes = [{
     path: 'xx'
     , redirectTo: '/form2'
     , pathMatch: 'full'
-  },
-
-  { //路由守卫
+  }
+  , { //路由守卫
     path: 'foot'
-    , component: MyfooterComponent
-    , //是一个数组，可以有几个条件判定。
+    , component: MyfooterComponent, //是一个数组，可以有几个条件判定。
     canActivate: [TestGuard, TestGuard2]
-  },
-
-  { //访问不到的路由，错误匹配路由
+  }
+  , {
+    path: 'details3'
+    , component: Details3Component
+  , }
+  , { //访问不到的路由，错误匹配路由
     path: '**'
     , component: TestComponent
   , }
 ];
-
-
-
-
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes)
