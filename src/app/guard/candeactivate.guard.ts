@@ -1,4 +1,6 @@
-import { CanActivate } from '@angular/router';
+import { CanDeactivate } from '@angular/router';
+import { TestComponent } from '../test/test.component';
+
  //可以算是一个普通组件，但没有装饰器
 // ng g component 声明后，会在module自动引用。。其它不变化
 // import { Component, OnInit } from '@angular/core';
@@ -11,43 +13,36 @@ import { CanActivate } from '@angular/router';
 //   constructor() { }
 //   ngOnInit() {
 //   }
-// }
+// } 
 
 
+export class LeaveGuard implements CanDeactivate<TestComponent> {
+  //private aa = "the value--";
+ 
+ canDeactivate(component: TestComponent)
+ {
 
-
-export class TestGuard implements CanActivate {
-  private aa = "the value--";
-  canActivate() {
-    let hasright: boolean = Math.random() > 0.5;
-    if (!hasright) {
-      alert(this.aa + hasright + "-TestGuard--not, DONT come in...");
+   if(component.isFocus())
+     {
+     console.log("不能离开 ");
       return false;
-    } else {
-      alert(this.aa + hasright + "-TestGuard--yes, please come to foot");
-      return true;
-    }
-  }
+     }
+     else 
+   {
+      console.log("可以离开-")
+     return true;
+   }
+
+
+ } 
+
+ 
+
+
 }
  
-
-
-export class TestGuard2 implements CanActivate {
  
-  private bb: boolean = true;
-  canActivate() {
-    if (this.bb) {
-      alert(this.bb + "-TestGuard 2--true, JUST come in...");
-      return true;
-    } else {
-      alert(this.bb + "-TestGuard 2--false, NOT NOT ...");
-      return false;
-       
-    }
-  }
-
-
  
   
 
-}
+ 

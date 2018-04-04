@@ -14,6 +14,8 @@ import { FuzhuOutletComponent } from '../fuzhu-outlet/fuzhu-outlet.component';
 import { RxjsComponent } from '../rxjs/rxjs.component';
 //倒入路由守卫，非组件 TestGuard需要加入到module provider
 import { TestGuard, TestGuard2 } from '../guard/test.guard';
+import { LeaveGuard } from '../guard/candeactivate.guard';
+
 
 
 
@@ -30,7 +32,9 @@ const routes: Routes = [{
   , {
     path: 'test'
     , component: TestComponent
-  , }
+    ,
+        canDeactivate: [LeaveGuard]
+    }
   , {
     path: 'details'
     , component: DetailsComponent

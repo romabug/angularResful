@@ -19,6 +19,7 @@ import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 //倒入路由守卫，非组件...TestGuard需要加入 provider, router里也要引用
 import { TestGuard, TestGuard2 } from './guard/test.guard';
+import { LeaveGuard } from './guard/candeactivate.guard';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { TestGuard, TestGuard2 } from './guard/test.guard';
     ReactiveFormsModule //响应式编程模块，可用于响应式表单
 
   ],
-  providers: [TestGuard, TestGuard2],
+  providers: [TestGuard, TestGuard2, LeaveGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
