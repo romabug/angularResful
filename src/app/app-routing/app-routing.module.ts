@@ -106,7 +106,7 @@ const routes: Routes = [{
     canActivate: [TestGuard, TestGuard2]
   }
   , {
-    path: 'detail3'
+    path: 'details3'
     , component: Details3Component 
   , }
   , { //访问不到的路由，错误匹配路由
