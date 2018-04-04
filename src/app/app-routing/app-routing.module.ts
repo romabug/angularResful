@@ -15,7 +15,13 @@ import { RxjsComponent } from '../rxjs/rxjs.component';
 //倒入路由守卫，非组件 TestGuard需要加入到module provider
 import { TestGuard, TestGuard2 } from '../guard/test.guard';
 import { LeaveGuard } from '../guard/candeactivate.guard';
+//import { StockResolve } from '../guard/resolve.guard';
+
+////////////////////////////////
 import { Details3Component } from '../details3/details3.component';
+
+
+
 const routes: Routes = [{
     path: ''
     , component: DashboardComponent
@@ -100,8 +106,8 @@ const routes: Routes = [{
     canActivate: [TestGuard, TestGuard2]
   }
   , {
-    path: 'details3'
-    , component: Details3Component
+    path: 'detail3'
+    , component: Details3Component 
   , }
   , { //访问不到的路由，错误匹配路由
     path: '**'

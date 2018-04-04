@@ -7,18 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Details3Component implements OnInit {
 
+  // private stock: Stock;
+  private stock  = {id:888, name:"alibaba333"};
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
-   private stock  = {id:4, name:"alibaba333"};
+
 
 
 }
 
 
- 
+     
 
 
 // export class Stock {

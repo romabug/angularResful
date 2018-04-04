@@ -18,9 +18,12 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 //倒入路由守卫，非组件...TestGuard需要加入 provider, router里也要引用
 import { TestGuard, TestGuard2 } from './guard/test.guard';
 import { LeaveGuard } from './guard/candeactivate.guard';
+////////
 import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { Details3Component } from './details3/details3.component';
+
+// import { StockResolve } from './guard/resolve.guard';
+ import { Details3Component } from './details3/details3.component';
 
 @NgModule({
   declarations: [
