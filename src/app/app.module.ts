@@ -17,6 +17,8 @@ import { Forms2Component } from './forms2/forms2.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
 import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+//倒入路由守卫，非组件...TestGuard需要加入 provider, router里也要引用
+import { TestGuard, TestGuard2 } from './guard/test.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     Forms2Component,
     DataBindComponent,
     FuzhuOutletComponent,
-    RxjsComponent
+    RxjsComponent    
+    //GuardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     ReactiveFormsModule //响应式编程模块，可用于响应式表单
 
   ],
-  providers: [],
+  providers: [TestGuard, TestGuard2],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
