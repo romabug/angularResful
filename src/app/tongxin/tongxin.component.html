@@ -1,0 +1,17 @@
+ 
+<h3>组件通讯－－ tongxin works! </h3>
+
+
+
+Search animals
+<input #gougou [(ngModel)]="mysearch" type="text" [placeholder]="showmyholder()">
+ <p>domyserch() passmycat 在父组件中声明， mycat 在子组件中声明 {{gougou.value}}</p>
+
+ <hr><p>底下是“app-details” 子组件</p>	
+<app-details 
+[mydog]="domyserch()" 
+[mycat]="passmycat +'--and add me'" 
+>
+	
+</app-details>	
+ 

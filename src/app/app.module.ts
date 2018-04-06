@@ -23,7 +23,8 @@ import { FuzhuOutletComponent } from './fuzhu-outlet/fuzhu-outlet.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
 // import { StockResolve } from './guard/resolve.guard';
- import { Details3Component } from './details3/details3.component';
+ import { Details3Component} from './details3/details3.component';
+ import { TongxinComponent } from './tongxin/tongxin.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     Forms2Component,
     DataBindComponent,
     FuzhuOutletComponent,
+ 
+    TongxinComponent,  
     RxjsComponent,
     Details3Component,    
     //GuardComponent

@@ -19,6 +19,7 @@ import { LeaveGuard } from '../guard/candeactivate.guard';
 
 ////////////////////////////////
 import { Details3Component } from '../details3/details3.component';
+ import { TongxinComponent } from '../tongxin/tongxin.component';
 
 
 
@@ -35,6 +36,12 @@ const routes: Routes = [{
     , component: TestComponent
     , canDeactivate: [LeaveGuard]
   }
+  , {
+    path: 'tongxin'
+    , component: TongxinComponent
+ 
+  }
+
   , {
     path: 'details'
     , component: DetailsComponent, //子路由， 记得加 2级 router-outlet

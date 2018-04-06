@@ -1,7 +1,18 @@
 <div>
   ---details works!
-  <span> 下面是从前一页 得到的数值</span>
-  <ul>
+
+ 
+  <ul> <h5>下面是来自父组件传进的 数据</h5>
+    <li> <strong>mydog --></strong> {{mydog}}</li>
+    <li>  <strong>mycat --></strong> {{mycat}} </li>
+    <button (click)="showanimals()">showanimals()</button>
+
+  </ul>
+
+
+<p><br></p>
+
+  <ul>  <span> 下面是从前一页 得到的数值－－routeInfo.snapshot</span>
     <li> <a href=""> 股票id 是：{{stockID}} </a></li>
     <li> <a href=""> 股票name 是：{{stockName}} </a></li>
     url 形式 http://localhost:4200/details?id=431name=tonycai
