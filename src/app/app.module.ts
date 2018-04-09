@@ -26,6 +26,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
  import { Details3Component} from './details3/details3.component';
  import { TongxinComponent } from './tongxin/tongxin.component';
 import { CartComponent } from './cart/cart.component';
+import { HooksComponent } from './hooks/hooks.component';
 
 
 
@@ -45,7 +46,8 @@ import { CartComponent } from './cart/cart.component';
     FuzhuOutletComponent,
     TongxinComponent,  
     CartComponent,  
-    RxjsComponent,
+ HooksComponent ,
+      RxjsComponent,
     Details3Component  
    
   ],

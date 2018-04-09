@@ -20,7 +20,7 @@ import { LeaveGuard } from '../guard/candeactivate.guard';
 ////////////////////////////////
 import { Details3Component } from '../details3/details3.component';
  import { TongxinComponent } from '../tongxin/tongxin.component';
-
+import { HooksComponent } from '../hooks/hooks.component';
 
 
 const routes: Routes = [{
@@ -70,6 +70,10 @@ const routes: Routes = [{
   , {
     path: 'head'
     , component: HeaderComponent
+  , }
+    , {
+    path: 'hooks'
+    , component: HooksComponent
   , }
   , {
     path: 'rxjs'
