@@ -61,7 +61,7 @@ searchResult: EventEmitter<StockInfo> = new EventEmitter();
   
    ////////发射给父组件
    this.searchResult.emit(stockInfo);
-     console.log("i am setInterval-", stockInfo);
+   //  console.log("i am setInterval-", stockInfo);
     
    }, 2000  )
 

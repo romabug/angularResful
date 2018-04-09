@@ -25,6 +25,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 // import { StockResolve } from './guard/resolve.guard';
  import { Details3Component} from './details3/details3.component';
  import { TongxinComponent } from './tongxin/tongxin.component';
+import { CartComponent } from './cart/cart.component';
+
+
 
 @NgModule({
   declarations: [
@@ -41,8 +44,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     DataBindComponent,
     FuzhuOutletComponent,
     TongxinComponent,  
+    CartComponent,  
     RxjsComponent,
-    Details3Component,    
+    Details3Component  
    
   ],
   imports: [

@@ -42,10 +42,10 @@ private getmystock: StockInfo ={name:"aaa", price:111};
 myreceiver(stockInfo: StockInfo){
  this.getmystock = stockInfo; 
  //console log 显示 obj 的方式
- console.log("i am result handler --", stockInfo);
+ ///console.log("i am result handler --", stockInfo);
   this.nn = stockInfo.name;
   this.pp = stockInfo.price;
-
+ 
 }
 
 

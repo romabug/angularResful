@@ -7,6 +7,12 @@ Search animals
   <li>stock price: {{pp}}</li>
 </ul>
 <hr>
+<app-cart  [tmpcat]="pp">
+</app-cart>
+
+
 <p>底下是“app-details” 子组件</p>
 <app-details [mydog]="domyserch()" [mycat]="passmycat +'--and add me'" (searchResult)="myreceiver($event)">
 </app-details>
+
+
