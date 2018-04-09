@@ -1,4 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
+import {StockInfo} from '../details/details.component';
+
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +16,8 @@ export class CartComponent implements OnInit {
 @Input()
 private tmpcat:string;
 
+@Input()
+private stockInfo:StockInfo ;
 
 
 }
