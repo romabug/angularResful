@@ -1,13 +1,14 @@
 <div>
-  ---details works!
+ 
   <ul>
-    <h5>下面是来自子组件 发射出的数据</h5>
-    <li> <strong>orange --></strong> </li>
-    <li> <strong>banana --></strong> </li>
+    <h4>下面是来自子组件发射出的数据</h4>
+    <p>我是子组件，要发射出去的数据是mystock对象:</p> 
+    {{mystock | json}}
+ 
   </ul>
-  
+<p></p>
   <ul>
-    <h5>下面是来自父组件传进的 数据</h5>
+    <h4>下面是来自父组件传进的 数据</h4>
     <li> <strong>mydog --></strong> {{mydog}}</li>
     <li> <strong>mycat --></strong> {{mycat}} </li>
     <button (click)="showanimals()">showanimals()</button>

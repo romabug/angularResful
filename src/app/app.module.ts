@@ -40,11 +40,10 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     Forms2Component,
     DataBindComponent,
     FuzhuOutletComponent,
- 
     TongxinComponent,  
     RxjsComponent,
     Details3Component,    
-    //GuardComponent
+   
   ],
   imports: [
     BrowserModule,
