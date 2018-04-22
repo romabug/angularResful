@@ -4,9 +4,9 @@ import { FormControl, FormGroup, FormArray } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-forms2',
-  templateUrl: './forms2.component.html',
-  styleUrls: ['./forms2.component.css']
+  selector: 'app-forms2'
+  , templateUrl: './forms2.component.html'
+  , styleUrls: ['./forms2.component.css']
 })
 export class Forms2Component implements OnInit {
 
@@ -26,39 +26,73 @@ export class Forms2Component implements OnInit {
       new FormControl("ilovealdi@gmail.com"),
       new FormControl("romabug@gmail.com")
     ]);
-  */
 
+*/
+
+  private tmp = new FormControl("i am tmp");
 
   //@@@ 响应式表单，重点在于在这里声明表单字段的数据结构
+  // formmodel 是整个表单的数据
   private myformModel: FormGroup;
 
   constructor() {
+    //@@@ 响应式表单，重点在于在这里声明表单字段的数据结构
+    // 数据结构要在  constructor 里声明
+    // 可以尝试表单构造器，简化了代码 private fb:FormBuilder = new FormBuilder();
 
     this.myformModel = new FormGroup({
-      myusername: new FormControl(),
-      myemail: new FormControl(),
-      mypwd: new FormControl(),
-      mypwd2: new FormControl(),
 
-    })
+      myusername: new FormControl()
+      , // myemail: new FormControl(),
+
+      emails: new FormArray([
+        new FormControl()
+
+      ]),
+
+      passwordInfo: new FormGroup({
+        mypwd: new FormControl()
+        , mypwd2: new FormControl(),
+
+      }),
+
+      mobile: new FormControl()
+      , address: new FormControl()
+
+    });
+
+
+ //自带表单验证 ///////////
+
+  //Validators.p
 
 
 
 
-  }
+  } // end constructor
+
 
   createUser() {
-
-console.log("ddd");  	
+    console.log(this.myformModel.value);
   };
 
 
-addEmail () {
-	console.log("add emails");  
-}
-
-
+  addEmail() {
+    console.log("add emails");
+    let emails = this.myformModel.get('emails') as FormArray;
+    emails.push(new FormControl());
+    console.log(this.myformModel.value);
+  }
 
   ngOnInit() {}
+
+//////／表单验证 ///////////
+
+//自定义 myvalidate(param:AbstractControl):{[key:string ]:any} { return null; }
+
+
+
+
+
 
 }

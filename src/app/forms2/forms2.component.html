@@ -1,10 +1,14 @@
-<h3> 响应式表单 -- forms2 works!</h3>
+<h3> 响应式表单－ReactiveFormsModule－-- forms2 works!</h3>
 
   
-<li>对象转json格式显示:  </li>
-<li>访问 passwordGROUP >>   </li>
-<li> 获取模版变量 myEMAIL >>  </li>
-<form [formGroup]="myformModel" (Submit)="createUser()">
+<li></li>
+
+<li> 属性绑定的写法  <input type="text" [formControl]="tmp"  > </li>
+<li>>>{{tmp.value}}  </li>
+
+
+
+<form [formGroup]="myformModel" >
   <div class="form2">
     <div class="form-group">
       <label for="username">username:</label>
@@ -12,31 +16,46 @@
     </div>
     <div class="form-group">
       <label for="email">Email address:</label>
-      <input type="email" class="form-control" formControlName = "myemail">
-<button  (click)= "addEmail()">ADD E-MAILS</button>
+
+  
+<!--  formArrayName 的模版写法 --> 
+
+ <ul formArrayName = "emails">
+    <li *ngFor="let item of myformModel.get('emails').controls; let i =index  ">
+      <input type="email"  [formControlName] = "i">
+    </li>
+
+  </ul>
+  
+    <button  (click)= "addEmail()">ADD E-MAILS</button>
+
+
+
+  
 
     </div>
 
-<div class="pwdgroup"  >
-    <div class="form-group">
-      <label for="pwd">password again:</label>
+<div formGroupName = "passwordInfo"   >
+   
+      <label for="pwd">password :</label>
       <input type="password" class="form-control" formControlName = "mypwd" >
-    </div>
-    <div class="form-group">
-      <label for="pwd2">Password:</label>
+   
+ 
+      <label for="pwd2">Password again:</label>
       <input type="password" class="form-control" formControlName = "mypwd2" >
-    </div>	
+ 
 
 </div>
 
-
+    mobile:  <input type="text" class="form-control" formControlName = "mobile" >
+  address:   <input type="text" class="form-control" formControlName = "address" >
 
 
     <div class="checkbox">
       <label>
         <input type="checkbox"> Remember me</label>
     </div>
-    <button type="submit" class="btn btn-default">Submit响应式表单</button>
+    <button (click)="createUser()" type="submit" class="btn btn-default">Submit响应式表单</button>
   </div>
 </form>
 
@@ -45,8 +64,8 @@
 <article>
 
   <li>模版式表单在html都是 ngForm,ngModel开头的。。。在模版中操作数据</li>
-  <li>响应式表单在 html里没有＃myform ＃mymodel绑定来访问。。。只能在ts里操作数据，不在模版中操作</li>
-
+  <li>响应式表单在 html里没有＃myform  不可以引用模版变量  ＃mymodel绑定来访问。。。只能在ts里操作数据，不在模版中操作</li>
+<li>记得app.module.ts 里面需要引入 ReactiveFormsModule </li>
   <li>记得本component里引入  FormControl,FormGroup, FormArray from '@angular/forms';
 </li>
   <li>formGroup 是 formControl的集合</li>
