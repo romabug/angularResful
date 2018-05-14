@@ -21,6 +21,7 @@ import {LeaveGuard} from '../guard/candeactivate.guard';
 import {Details3Component} from '../details3/details3.component';
 import {TongxinComponent} from '../tongxin/tongxin.component';
 import {HooksComponent} from '../hooks/hooks.component';
+import {PeopleComponent} from '../testmodule/people/people.component';
 
 
 const routes: Routes = [{
@@ -33,6 +34,15 @@ const routes: Routes = [{
     , component: DashboardComponent
     ,
   }
+
+  , {
+     //这里是引用的 模块 里面的 组件
+    path: 'people'
+    , component: PeopleComponent
+    ,
+  }
+
+
   ,
   {//懒加载 子模块
     path: 'product',

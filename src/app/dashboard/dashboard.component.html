@@ -5,10 +5,22 @@
 
 <ul>子模块操作
 
-  <app-myindex></app-myindex>
+  <li><a [routerLink]="['/people']"> 跳转到引用的模块TestmoduleModule-PeopleComponent－非懒性加载的模块</a></li>
 
-  <li>  <a [routerLink]="['/product']"> 懒加载子模块－－product</a>
-      <button routerLink="/product">lazy load product</button></li>
+  <li>
+    <!--这里插入功能模块TestmoduleModule中的主组件<app-myindex></app-myindex>，非懒性加载。-->
+    <app-myindex></app-myindex>
+
+  </li>
+
+
+  <li>
+
+  </li>
+
+  <li><a [routerLink]="['/product']"> 懒加载子模块－－product</a>
+    <button routerLink="/product">lazy load product</button>
+  </li>
 
 </ul>
 
