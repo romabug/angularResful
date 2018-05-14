@@ -1,24 +1,28 @@
 <div class="mydetail">
- 
+
+
+
   <ul>
     <h4>下面是来自子组件发射出的数据</h4>
-    <p>我是子组件，要发射出去的数据是mystock对象:</p> 
+    <p>我是子组件，要发射出去的数据是mystock对象:</p>
     {{mystock | json}}
- 
+
   </ul>
-<p></p>
+
+
+  <p></p>
   <ul>
-    <h4>下面是来自父组件传进的 数据</h4>
-    <li> <strong>mydog --></strong> {{mydog}}</li>
-    <li> <strong>mycat --></strong> {{mycat}} </li>
+    <h2>下面是来自父组件传进的 数据</h2>
+    <li><strong>mydog --></strong> {{mydog}}</li>
+    <li><strong>mycat --></strong> {{mycat}}</li>
     <button (click)="showanimals()">showanimals()</button>
   </ul>
   <p>
     <br>
   </p>
-  <ul> <span> 下面是从前一页 得到的数值－－routeInfo.snapshot</span>
-    <li> <a href=""> 股票id 是：{{stockID}} </a></li>
-    <li> <a href=""> 股票name 是：{{stockName}} </a></li>
+  <ul><span> 下面是从前一页 得到的数值－－routeInfo.snapshot</span>
+    <li><a href=""> 股票id 是：{{stockID}} </a></li>
+    <li><a href=""> 股票name 是：{{stockName}} </a></li>
     url 形式 http://localhost:4200/details?id=431name=tonycai
   </ul>
   <hr>

@@ -1,4 +1,12 @@
- 
-<div  class= 'row myfooter'>
- hi, myfooter works!
+<div class='row myfooter'>
+
+  <ng-content select="[foot-a]"></ng-content>
+  <span>[---ng-content 属性名的形式插入---]</span>
+  <button  class="btn btn-primary" (click)= "anniDiv()">show annimation</button>
+  <ng-content select="[foot-b]"></ng-content>
+
+
+  <div   [@visibilityChanged]="isshow"  style="border: 1px solid red; "> haha animation
+  --主模块中 导入 BrowserAnimationsModule</div>
+
 </div>
