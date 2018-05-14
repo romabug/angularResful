@@ -1,18 +1,31 @@
 <base href="/">
 <h3>
-///////  dashboard works!
+  /////// dashboard works!
 </h3>
-<ul> router 路由操作
-  <li><a [routerLink]="['/test']">  常规导航--go  test</a></li>
-  <li><a [routerLink]="['/details']" [queryParams]="{id:1, name:'tonycai'}"> 常规链接带参数 的跳转--go test with params: id name</a>
-  </li>
-  <li><a [routerLink]="['/details2', 'tony']">router路由配置中带参数 的跳转--go  details2 params: name</a></li>
-  <li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">子路由例子－－go  details params: id name</a> </li>
-  <li><a [routerLink]="['/xx']">重定向路由--go  xx</a></li>
-  <li><a [routerLink]="['/foot']">路由守卫-- CanActivate-go guard －－ 是否可以进入某组件</a></li>
-    <li><a [routerLink]="['/test']">路由守卫2-- CanDeactivate-go test －－是否可以离开某组件</a></li>
 
-    <li><a [routerLink]="['/details3']">＊＊路由守卫3 --  resolve -页面渲染前从服务器拿json ，非常重要 －－go details3</a></li>
+<ul>子模块操作
+
+  <app-myindex></app-myindex>
+
+  <li>  <a [routerLink]="['/product']"> 懒加载子模块－－product</a>
+      <button routerLink="/product">lazy load product</button></li>
+
+</ul>
+
+
+<ul> router 路由操作
+  <li><a [routerLink]="['/test']"> 常规导航--go test</a></li>
+  <li><a [routerLink]="['/details']" [queryParams]="{id:1, name:'tonycai'}"> 常规链接带参数 的跳转--go test with params: id
+    name</a>
+    <button routerLink="/details">jump from button</button>
+  </li>
+  <li><a [routerLink]="['/details2', 'tony']">router路由配置中带参数 的跳转--go details2 params: name</a></li>
+  <li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">子路由例子－－go details params: id name</a></li>
+  <li><a [routerLink]="['/xx']">重定向路由--go xx</a></li>
+  <li><a [routerLink]="['/foot']">路由守卫-- CanActivate-go guard －－ 是否可以进入某组件</a></li>
+  <li><a [routerLink]="['/test']">路由守卫2-- CanDeactivate-go test －－是否可以离开某组件</a></li>
+
+  <li><a [routerLink]="['/details3']">＊＊路由守卫3 -- resolve -页面渲染前从服务器拿json ，非常重要 －－go details3</a></li>
 
 </ul>
 <ul> 表单处理
@@ -25,7 +38,7 @@
 
 <ul> 组件通讯， 钩子和生命周期
   <li><a [routerLink]="['/tongxin']">组件通讯 1--go tongxin</a></li>
- <li><a [routerLink]="['/hooks']">钩子和生命周期 1--go hooks</a></li>
+  <li><a [routerLink]="['/hooks']">钩子和生命周期 1--go hooks</a></li>
 
 </ul>
 

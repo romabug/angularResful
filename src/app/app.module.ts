@@ -29,6 +29,8 @@ import {CartComponent} from './cart/cart.component';
 import {HooksComponent} from './hooks/hooks.component';
 import {FuzhuOutletComponent} from './fuzhu-outlet/fuzhu-outlet.component';
 
+// ＊＊ 导入 自定义的模块
+import { TestmoduleModule } from './testmodule/testmodule.module';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import {FuzhuOutletComponent} from './fuzhu-outlet/fuzhu-outlet.component';
     BrowserModule, BrowserAnimationsModule,
     AppRoutingModule, // 路由
     FormsModule, //模版表单
-    ReactiveFormsModule //响应式编程模块，可用于响应式表单
+    ReactiveFormsModule, //响应式编程模块，可用于响应式表单
+    TestmoduleModule    // ＊＊ 导入 自定义的模块..如果是懒加载则仅路由声明即可，不需要导入
 
   ],
   providers: [TestGuard, TestGuard2, LeaveGuard],
