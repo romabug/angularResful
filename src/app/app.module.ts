@@ -62,7 +62,7 @@ import { TestmoduleModule } from './testmodule/testmodule.module';
     TestmoduleModule    // ＊＊ 导入 自定义的模块..如果是懒加载则仅路由声明即可，不需要导入
 
   ],
-  providers: [TestGuard, TestGuard2, LeaveGuard],
+  providers: [TestGuard, TestGuard2, LeaveGuard],    //路由守卫 一样要事先注入
   bootstrap: [AppComponent]
 })
 export class AppModule {

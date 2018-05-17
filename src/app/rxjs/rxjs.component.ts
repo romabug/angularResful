@@ -38,9 +38,6 @@ export class RxjsComponent implements OnInit {
   }
 
 
-  onkey(input: string): void {
-    console.log(input);
-  }
 
 
   ngOnInit() {
@@ -81,6 +78,11 @@ export class RxjsComponent implements OnInit {
 
     this.mytmp.push(value);
     console.log(this.mytmp);
+  }
+
+
+  onkey(input: string): void {
+    console.log(input);
   }
 
 
