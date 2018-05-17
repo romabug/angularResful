@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {Observable} from 'rxjs';
 import 'rxjs/Rx';
 
 
@@ -11,26 +11,15 @@ import 'rxjs/Rx';
 })
 export class RxjsComponent implements OnInit {
 
-  // FormControl   
+  // FormControl
   searchInput: FormControl = new FormControl();
 
-  getStockInfo(value: string) { console.log(value); }
- 
+
   constructor() {
-  /// 延迟响应////仅下面2行//
-    this.searchInput.valueChanges
-      .debounceTime(700)
-      .subscribe(
-      	e => this.getStockInfo(e), 
-       () => console.log("the end..") //流发射结束后运行
-
-     );
-
- 
 
     ////////测试响应式编程/////////////////////
 
-    //被观察对象 Observable -- 流，数组 
+  //  被观察对象 Observable -- 流，数组
     Observable.from([1, 2, 3, 4, 5])
 
       .filter(e => e % 2 == 0) //对流的Operators－－ filter操作
@@ -39,9 +28,9 @@ export class RxjsComponent implements OnInit {
       // 监听流的行为－订阅称，之为观察者Observer
       .subscribe(
         e => console.log(e), //必要动作
-        //底下2个是可选动作 
+        //底下2个是可选动作
         err => console.error(err),
-        () => console.log("结束了..") //流发射结束后运行
+        () => console.log('结束了..') //流发射结束后运行
       );
 
     ////////////////////////////////////////////////////////
@@ -49,12 +38,50 @@ export class RxjsComponent implements OnInit {
   }
 
 
-
   onkey(input: string): void {
     console.log(input);
   }
 
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    /// 延迟响应////仅下面2行//
+    this.searchInput.valueChanges
+      .debounceTime(500)
+      .filter(e => parseInt(e) > 100)
+      .filter(e => parseInt(e) < 999)
+      .map(e => {
+        if (parseInt(e) > 500) {
+          e = e + 'up 500';
+        } else
+          e = this.addme(e);
+        return e;
+
+      })
+      .map(e => e + '@@@@')
+      .subscribe(
+        e => this.getStockInfo(e),
+        err => console.error(err),
+        () => console.log('the end..') //流发射结束后运行
+
+      );
+
+  }
+
+
+  addme(value: string): any {
+    return value + 'done done';
+  };
+
+
+  //private mytmp:Array<string> =[];
+  private mytmp: string[] = [];
+
+  getStockInfo(value: string) {
+
+    this.mytmp.push(value);
+    console.log(this.mytmp);
+  }
+
 
 }

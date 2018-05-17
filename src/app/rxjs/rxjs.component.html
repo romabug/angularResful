@@ -9,9 +9,11 @@
 <button type="button" class="btn btn-sm btn-primary">Primary</button>
 <button type="button" class="btn btn-sm btn-success">Success</button>
 <br>
-<label for="username">TEST FormControl:</label>
+<label for="username">TEST FormControl, 输入变化作为可观察对象:</label>
 <!-- 	<li>[formControl] 是驼峰的 首字母小写</li> -->
 <input class="form-control" type="text" placeholder="输入股票" [formControl]="searchInput">
+
+<p></p>
 <label for="username">SEARCH KEY WORD:{{mySearch.value}}</label>
 <input type="text" class="form-control" #mySearch (keyup)="onkey(mySearch.value)">
 <ul>
