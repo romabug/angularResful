@@ -1,4 +1,4 @@
-import { CanActivate } from '@angular/router';
+import {CanActivate, CanDeactivate} from '@angular/router';
  //可以算是一个普通组件，但没有装饰器
 // ng g component 声明后，会在module自动引用。。其它不变化
 // import { Component, OnInit } from '@angular/core';
@@ -16,8 +16,11 @@ import { CanActivate } from '@angular/router';
 
 
 
+
 export class TestGuard implements CanActivate {
   private aa = "the value--";
+
+
   canActivate() {
     let hasright: boolean = Math.random() > 0.5;
     if (!hasright) {
@@ -29,11 +32,11 @@ export class TestGuard implements CanActivate {
     }
   }
 }
- 
+
 
 
 export class TestGuard2 implements CanActivate {
- 
+
   private bb: boolean = true;
   canActivate() {
     if (this.bb) {
@@ -42,12 +45,9 @@ export class TestGuard2 implements CanActivate {
     } else {
       alert(this.bb + "-TestGuard 2--false, NOT NOT ...");
       return false;
-       
+
     }
   }
 
-
- 
-  
 
 }
