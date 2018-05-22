@@ -33,6 +33,7 @@ export class RxjsComponent implements OnInit {
         () => console.log('结束了..') //流发射结束后运行
       );
 
+
     ////////////////////////////////////////////////////////
 
   }

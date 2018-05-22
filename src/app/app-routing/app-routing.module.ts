@@ -22,6 +22,7 @@ import {Details3Component} from '../details3/details3.component';
 import {TongxinComponent} from '../tongxin/tongxin.component';
 import {HooksComponent} from '../hooks/hooks.component';
 import {PeopleComponent} from '../testmodule/people/people.component';
+import {HttpComponent} from '../http/http.component';
 
 
 const routes: Routes = [{
@@ -29,6 +30,7 @@ const routes: Routes = [{
   , component: DashboardComponent
   ,
 }
+
   , {
     path: 'deshboard'
     , component: DashboardComponent
@@ -57,6 +59,11 @@ const routes: Routes = [{
   , {
     path: 'tongxin'
     , component: TongxinComponent
+
+  }
+  , {
+    path: 'http'
+    , component: HttpComponent
 
   }
 

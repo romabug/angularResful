@@ -6,33 +6,40 @@
   <button type="button" class="btn btn-sm btn-primary">Primary</button>
   <button type="button" class="btn btn-sm btn-success">Success</button>
 </p>
-<li>对象转json格式显示:{{myForm.value | json}} </li>
-<li>访问 passwordGROUP >> {{myForm.value.passwordGROUP | json}} </li>
-<li> 获取模版变量 myEMAIL >> {{ myEMAIL.value}} </li>
+<li>对象转json格式显示:{{myForm.value | json}}</li>
+<li>访问 passwordGROUP >> {{myForm.value.passwordGROUP | json}}</li>
+<li> 获取模版变量 myEMAIL >> {{ myEMAIL.value}}</li>
 <form #myForm="ngForm" (ngSubmit)="createUser(myForm.value)">
   <div class="form1">
     <div class="form-group">
       <label for="username">username:</label>
-      <input type="text" class="form-control" ngModel name="myusername">
+      <input  #nn ='ngModel'  type="text" class="form-control" ngModel name="myusername" required minlength="3" >
+      <div *ngIf = "nn.invalid && (nn.dirty||nn.touched)"   style="color: mediumvioletred">
+        <div *ngIf = "nn?.errors.required" >user Name is required. </div>
+        <div *ngIf = "nn?.errors.minlength" >Name must be at least 3 characters long. </div>
+      </div>
+
+
     </div>
     <div class="form-group">
       <label for="email">Email address:</label>
-      <input type="email" class="form-control" ngModel name="myemail" #myEMAIL="ngModel">
+      <input  type="email" class="form-control" ngModel name="myemail" #myEMAIL="ngModel"  required minlength="3">
+      <div *ngIf = "myEMAIL.invalid && (myEMAIL.dirty||myEMAIL.touched)"   style="color: blue">
+            invalid input </div>
+
     </div>
 
-<div ngModelGroup = "passwordGROUP">
-    <div class="form-group">
-      <label for="pwd">password again:</label>
-      <input type="password" class="form-control" ngModel name="mypass">
+    <div ngModelGroup="passwordGROUP">
+      <div class="form-group">
+        <label for="pwd">password again:</label>
+        <input type="password" class="form-control" ngModel name="mypass">
+      </div>
+      <div class="form-group">
+        <label for="pwd2">Password:</label>
+        <input type="password" class="form-control" ngModel name="mypass2">
+      </div>
+
     </div>
-    <div class="form-group">
-      <label for="pwd2">Password:</label>
-      <input type="password" class="form-control" ngModel name="mypass2">
-    </div>	
-
-</div>
-
-
 
 
     <div class="checkbox">
@@ -46,7 +53,7 @@
   <li>引入了FormsModule模块后，angular自动在form标签里放入ngForm标签,并接管from表单， submit不起作用。。。 ngForm也可以放div里，就不需要form 标签</li>
   <li>如果ngNoForm 则表单不被angular接管</li>
   <li> 每个接收数据的表单，必须有 ngModel name=" xxx " ， xxx作为 myForm 对象的 一个属性</li>
-  <li>模版变量的 绑定 需要在表单里声明 #myEMAIL ="ngModel",访问则{{ myEMAIL.value}} </li>
+  <li>模版变量的 绑定 需要在表单里声明 #myEMAIL ="ngModel",访问则{{ myEMAIL.value}}</li>
   <li> ngModelGroup 用于组织表单属性, 仅需要在几个表单外层标签上声明 ngModelGroup = "passwordGROUP"， json 数据遍自动加属性分组</li>
   <li></li>
   <li></li>

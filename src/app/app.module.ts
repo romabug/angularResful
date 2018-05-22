@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -30,7 +31,12 @@ import {HooksComponent} from './hooks/hooks.component';
 import {FuzhuOutletComponent} from './fuzhu-outlet/fuzhu-outlet.component';
 
 // ＊＊ 导入 自定义的模块
-import { TestmoduleModule } from './testmodule/testmodule.module';
+import {TestmoduleModule} from './testmodule/testmodule.module';
+
+
+
+import {HttpComponent} from './http/http.component';
+import {Http} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -48,6 +54,8 @@ import { TestmoduleModule } from './testmodule/testmodule.module';
     FuzhuOutletComponent,
     TongxinComponent,
     CartComponent,
+
+    HttpComponent,
     HooksComponent,
 
     RxjsComponent,
@@ -59,7 +67,8 @@ import { TestmoduleModule } from './testmodule/testmodule.module';
     AppRoutingModule, // 路由
     FormsModule, //模版表单
     ReactiveFormsModule, //响应式编程模块，可用于响应式表单
-    TestmoduleModule    // ＊＊ 导入 自定义的模块..如果是懒加载则仅路由声明即可，不需要导入
+    TestmoduleModule,   // ＊＊ 导入 自定义的模块..如果是懒加载则仅路由声明即可，不需要导入
+    HttpModule     // HTTP 服务
 
   ],
   providers: [TestGuard, TestGuard2, LeaveGuard],    //路由守卫 一样要事先注入
