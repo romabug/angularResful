@@ -37,6 +37,7 @@ import {TestmoduleModule} from './testmodule/testmodule.module';
 
 import {HttpComponent} from './http/http.component';
 import {Http} from '@angular/http';
+import {Myser, Myser2} from './myservice.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import {Http} from '@angular/http';
     HttpModule     // HTTP 服务
 
   ],
-  providers: [TestGuard, TestGuard2, LeaveGuard],    //路由守卫 一样要事先注入
+  providers: [TestGuard, TestGuard2, LeaveGuard, Myser, Myser2],    //路由守卫 一样要事先注入
   bootstrap: [AppComponent]
 })
 export class AppModule {

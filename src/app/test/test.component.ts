@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {Myser} from '../myservice.service';
+import { myaaa } from '../mygloble';
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -7,13 +9,23 @@ import { Router } from '@angular/router';
 })
 export class TestComponent implements OnInit {
 
-  constructor(private router: Router) {};
+  constructor(private router: Router, private ser1:Myser) {};
 
 
   ngOnInit() {
   }
 
 private tmp:boolean;
+
+  serupdate () {
+
+    this.ser1.name = "got changed hohoho";
+    myaaa.aa = "myaaa updated by test"
+
+  }
+
+
+
   isFocus()
   {
   //this.router.navigate(['/form1']);
