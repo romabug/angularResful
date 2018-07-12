@@ -6,6 +6,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -34,10 +35,12 @@ import {FuzhuOutletComponent} from './fuzhu-outlet/fuzhu-outlet.component';
 import {TestmoduleModule} from './testmodule/testmodule.module';
 
 
-
 import {HttpComponent} from './http/http.component';
-import {Http} from '@angular/http';
+import {JsonserverComponent} from './jsonserver/jsonserver.component';
 import {Myser, Myser2} from './myservice.service';
+import {BusreportComponent} from './busreport/busreport.component' ;
+import { MypipePipe } from './pipe/mypipe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -55,13 +58,15 @@ import {Myser, Myser2} from './myservice.service';
     FuzhuOutletComponent,
     TongxinComponent,
     CartComponent,
-
     HttpComponent,
+    JsonserverComponent,
+
     HooksComponent,
-
+    Details3Component,
     RxjsComponent,
-    Details3Component
 
+    BusreportComponent,
+    MypipePipe,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -69,7 +74,8 @@ import {Myser, Myser2} from './myservice.service';
     FormsModule, //模版表单
     ReactiveFormsModule, //响应式编程模块，可用于响应式表单
     TestmoduleModule,   // ＊＊ 导入 自定义的模块..如果是懒加载则仅路由声明即可，不需要导入
-    HttpModule     // HTTP 服务
+    //   HttpModule   ,  // HTTP 服务
+    HttpClientModule
 
   ],
   providers: [TestGuard, TestGuard2, LeaveGuard, Myser, Myser2],    //路由守卫 一样要事先注入

@@ -1,0 +1,29 @@
+
+textarea {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.citytable {
+  display: block;
+  cursor: pointer;
+
+}
+.citytable:before {
+  float: right;
+}
+
+.title-bg {
+  background: lightblue;
+}
+
+.first-word:first-letter {
+   font-weight: bold;
+ }
+
+.red { color: red }
+.green {color: green}
+.blue {color:blue}

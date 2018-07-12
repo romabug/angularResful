@@ -1,0 +1,30 @@
+<h2 (click)="switchIcon()" [class]="iconClass" class="citytable glyphicon glyphicon-collapse-up">
+  {{title}} - {{mydate}}
+</h2>
+
+<div class="mybox" *ngIf="boxOpen">
+  <table class="table">
+    <thead>
+    <tr class="title-bg">
+      <th>Bus ID</th>
+      <th>Route Variant</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let item of mybus  ">
+      <td>{{item.busId}}</td>
+      <td class="first-word">{{item?.routeVariant}}</td>
+      <td [class]="getstyle(item.deviationFromTimetable)"  >{{item?.deviationFromTimetable | mypipe}}</td>
+     </tr>
+
+    </tbody>
+  </table>
+
+
+  <textarea placeholder="enter notes here" name="" id="" rows="3"></textarea>
+  <button class="btn btn-primary">Save Notes</button>
+</div>
+
+

@@ -1,0 +1,12 @@
+
+<h3>bus component below</h3>
+<hr>
+
+<div class="container info-block"  *ngFor="let businfo of mydata ">
+  <app-busreport [title] ="businfo.organisation" [mydate]="businfo.date"  [mybus]="businfo.busData" ></app-busreport>
+
+
+</div>
+
+
+<!--<app-busreport [tryit] ="tmpbus"  [mybus]="mybus" ></app-busreport>-->

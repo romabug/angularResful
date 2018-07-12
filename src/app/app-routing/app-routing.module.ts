@@ -23,6 +23,8 @@ import {TongxinComponent} from '../tongxin/tongxin.component';
 import {HooksComponent} from '../hooks/hooks.component';
 import {PeopleComponent} from '../testmodule/people/people.component';
 import {HttpComponent} from '../http/http.component';
+import {JsonserverComponent} from '../jsonserver/jsonserver.component';
+import {BusreportComponent} from '../busreport/busreport.component';
 
 
 const routes: Routes = [{
@@ -34,11 +36,23 @@ const routes: Routes = [{
   , {
     path: 'deshboard'
     , component: DashboardComponent
-    ,
+
+  }
+  , {
+    path: 'jsonserver'
+    , component: JsonserverComponent,
+
   }
 
   , {
-     //这里是引用的 模块 里面的 组件
+    path: 'bus'
+    , component: BusreportComponent,
+
+  }
+
+
+  , {
+    //这里是引用的 模块 里面的 组件
     path: 'people'
     , component: PeopleComponent
     ,
