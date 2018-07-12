@@ -1,13 +1,12 @@
 <base href="/">
 <h3>
-  /////// dashboard works!
+  dashboard works!
 </h3>
 
 
-<h5><span> tmpa -- {{tmpa}} </span> {{myser1.name}}{{myser2.sername}}</h5>
 
-<ul> JSON SERVER -- 进入mock目录，运行npm run mock （package.json必须在那）
-  <li><a [routerLink]="['/jsonserver']">JSON SERVER</a></li>
+<ul>
+  <li><a [routerLink]="['/jsonserver']">SYDNEY BUS   </a></li>
 </ul>
 
 
@@ -16,65 +15,6 @@
   <li><a [routerLink]="['/bus']">BUS REPORT </a></li>
 </ul>
 
-<ul>子模块操作
-
-  <li><a [routerLink]="['/people']"> 跳转到引用的模块TestmoduleModule-PeopleComponent－非懒性加载的模块</a></li>
-
-  <li>
-    <!--这里插入功能模块TestmoduleModule中的主组件<app-myindex></app-myindex>，非懒性加载。-->
-    <app-myindex></app-myindex>
-
-  </li>
-
-
-  <li>
-
-  </li>
-
-  <li><a [routerLink]="['/product']"> 懒加载子模块－－product</a>
-    <button routerLink="/product">lazy load product</button>
-  </li>
-
-</ul>
-
-
-<ul> router 路由操作
-  <li><a [routerLink]="['/test']"> 常规导航--go test</a></li>
-  <li><a [routerLink]="['/details']" [queryParams]="{id:1, name:'tonycai'}"> 常规链接带参数 的跳转--go test with params: id
-    name</a>
-    <button routerLink="/details">jump from button</button>
-  </li>
-  <li><a [routerLink]="['/details2', 'tony']">router路由配置中带参数 的跳转--go details2 params: name</a></li>
-  <li><a [routerLink]="['/details']" [queryParams]="{id:431, name:'tonycai'}">子路由例子－－go details params: id name</a></li>
-  <li><a [routerLink]="['/xx']">重定向路由--go xx</a></li>
-  <li><a [routerLink]="['/foot']">路由守卫-- CanActivate-go guard －－ 是否可以进入某组件</a></li>
-  <li><a [routerLink]="['/test']">路由守卫2-- CanDeactivate-go test －－是否可以离开某组件</a></li>
-
-  <li><a [routerLink]="['/details3']">＊＊路由守卫3 -- resolve -页面渲染前从服务器拿json ，非常重要 －－go details3</a></li>
-
-</ul>
-<ul> 表单处理
-  <li><a [routerLink]="['/form1']">模版式表单--go form1</a></li>
-  <li><a [routerLink]="['/form2']">相应式表单--go form2</a></li>
-</ul>
-<ul> 数据绑定
-  <li><a [routerLink]="['/databind']">数据绑定1--go data-bind</a></li>
-</ul>
-
-<ul> 组件通讯， 钩子和生命周期
-  <li><a [routerLink]="['/tongxin']">组件通讯 1--go tongxin</a></li>
-  <li><a [routerLink]="['/hooks']">钩子和生命周期 1--go hooks</a></li>
-
-</ul>
-
-
-<ul> RXJS 响应式编程
-  <li><a [routerLink]="['/rxjs']">数据绑定1--go rxjs 响应式编程</a></li>
-</ul>
-
-<ul> HTTP SERVICE 通信
-  <li><a [routerLink]="['/http']">HTTP SERVICE 通信</a></li>
-</ul>
 
 
 
