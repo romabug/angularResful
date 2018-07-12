@@ -1,6 +1,6 @@
 # BUS SERVICE
 
-2 how to run this app
+>> how to run this app
 
 step 1: download the code.
 
