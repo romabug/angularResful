@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
- export interface Bus {
+export interface Bus {
   busId: string;
   routeVariant: string;
   deviationFromTimetable: number;
@@ -19,11 +19,9 @@ export class JsonserverComponent implements OnInit {
 
   }
 
-   private tmp: any;
+  private tmp: any;
   private myurl: string;
   private mydata: any;
-
-
 
 
   ngOnInit() {
@@ -33,19 +31,11 @@ export class JsonserverComponent implements OnInit {
 
     this.tmp = this.http
       .get(this.myurl)
-
       .map(data => data)
-
       .subscribe(
         data => {
-          console.log(data);
+      //    console.log(data);
           this.mydata = data;
-
-
-        //   this.mybus = this.mydata[0].busData;
-        //   this.mybus2 = this.mydata[1].busData;
-        // console.log(this.mybus);
-
 
         }
         , (err) => {
