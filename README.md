@@ -2,7 +2,7 @@
 
 >> how to run this app
 
-step 1: download the code.
+step 1: download code https://github.com/romabug/angularResful/tree/sydneybus.
 
 step 2: run "npm install" from the root.
 
