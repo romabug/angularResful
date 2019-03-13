@@ -10,6 +10,7 @@ ng e2e - 运行端到端（end-to-end）测试
 ng serve - 启动一个小型web服务器，用于托管应用
 ng deploy - 即开即用，部署到Github Pages或者Firebase
 // test it
+// try jenkins
 
      组件| ng g component home/component/my-new-component     
  
